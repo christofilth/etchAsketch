@@ -1,5 +1,12 @@
+const container = document.getElementById("container");
+const settingsContainer = document.createElement("div");
+settingsContainer.classList.add("settingsContainer");
+container.appendChild(settingsContainer);
+const gridContainer = document.createElement("div");
+gridContainer.classList.add("gridContainer");
+container.appendChild(gridContainer);
+
 function createGrid(column,row){
-    const container = document.getElementById("container");
     document.documentElement.style.setProperty("--column", column);
     for (i = 0; i < column * row; i++){
         const cell = document.createElement("div");
@@ -7,7 +14,7 @@ function createGrid(column,row){
         cell.addEventListener("mouseover", () => {
             cell.style.backgroundColor = "grey";
         });
-        container.appendChild(cell);
+        gridContainer.appendChild(cell);
     }
 }
 
