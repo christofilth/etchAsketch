@@ -29,9 +29,9 @@ const gridContainer = document.createElement("div");
 gridContainer.classList.add("gridContainer");
 container.appendChild(gridContainer);
 
-function createGrid(column,row){
-    document.documentElement.style.setProperty("--column", column);
-    for (i = 0; i < column * row; i++){
+function createGrid(gridSize){
+    document.documentElement.style.setProperty("--gridSize", gridSize);
+    for (i = 0; i < gridSize * gridSize; i++){
         const cell = document.createElement("div");
         cell.classList.add("cell");
         cell.addEventListener("mouseover", () => {
@@ -41,4 +41,4 @@ function createGrid(column,row){
     }
 }
 
-createGrid(16,16);
+createGrid(16);

@@ -7,7 +7,7 @@
 
 .cell {
     border: 1px solid black;
-    width: calc(100% / var(--column));
-    padding-bottom: calc(100% / var(--column));
+    width: calc(100% / var(--gridSize));
+    padding-bottom: calc(100% / var(--gridSize));
     box-sizing: border-box;
 }
