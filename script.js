@@ -4,9 +4,10 @@ const settingsContainer = document.createElement("div");
 settingsContainer.classList.add("settingsContainer");
 container.appendChild(settingsContainer);
 
-const sizeInput = document.createElement("input")
-sizeInput.classList.add("sizeInput");
+const sizeInput = document.createElement("input");
+sizeInput.setAttribute("id", "sizeInput");
 settingsContainer.appendChild(sizeInput);
+document.getElementById("sizeInput").value = "Enter a grid size up to 100";
 
 const gridContainer = document.createElement("div");
 gridContainer.classList.add("gridContainer");
