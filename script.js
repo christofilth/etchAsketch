@@ -19,6 +19,12 @@ sizeButton.classList.add("sizeButton");
 sizeButton.textContent = "Go!";
 sizeButton.addEventListener("click", () => {
     let userSize = document.getElementById("sizeInput").value;
+    if (userSize > 0 && userSize <= 100) {
+    gridContainer.innerHTML="";
+    createGrid(userSize);
+    } else {
+        alert("Please enter a number between 1 and 100");
+    }
     console.log(userSize);
 });
 settingsContainer.appendChild(sizeButton);
