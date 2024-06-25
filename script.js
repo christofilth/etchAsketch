@@ -1,5 +1,7 @@
 const container = document.getElementById("container");
 
+// Settings bar 
+
 const settingsContainer = document.createElement("div");
 settingsContainer.classList.add("settingsContainer");
 container.appendChild(settingsContainer);
@@ -11,6 +13,13 @@ sizeInput.addEventListener("click", () => {
     });
 settingsContainer.appendChild(sizeInput);
 document.getElementById("sizeInput").value = "Enter a grid size up to 100";
+
+const sizeButton = document.createElement("button");
+sizeButton.classList.add("sizeButton");
+sizeButton.textContent = "Go!";
+settingsContainer.appendChild(sizeButton);
+
+// Grid
 
 const gridContainer = document.createElement("div");
 gridContainer.classList.add("gridContainer");
