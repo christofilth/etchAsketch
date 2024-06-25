@@ -1,7 +1,13 @@
 const container = document.getElementById("container");
+
 const settingsContainer = document.createElement("div");
 settingsContainer.classList.add("settingsContainer");
 container.appendChild(settingsContainer);
+
+const sizeInput = document.createElement("input")
+sizeInput.classList.add("sizeInput");
+settingsContainer.appendChild(sizeInput);
+
 const gridContainer = document.createElement("div");
 gridContainer.classList.add("gridContainer");
 container.appendChild(gridContainer);
