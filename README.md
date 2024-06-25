@@ -11,3 +11,6 @@ Hand wrote code for createGrid function first. After setting up the files and cr
 
 ### Set up a “hover” effect so that the grid divs change color when your mouse passes over them
 Added an event listener so that when the cursor moves over the cell, it changes from white to grey.
+
+### Add user input to change grid size
+Created an input box and button to change the grid size. When the user presses the button, the grid is cleared and a new one is created based on the number entered. An alert pops up if the user enters a number that isn't between 1 and 100. 
