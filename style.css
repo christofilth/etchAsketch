@@ -1,8 +1,11 @@
 #container {
     display: flex;
+    flex-wrap: wrap;
     width: 800px;
 }
 
 .cell {
     border: 1px solid black;
+    width: calc(100% / var(--column));
+    padding-bottom: calc(100% / var(--column));
 }
