@@ -4,6 +4,9 @@ function createGrid(column,row){
     for (i = 0; i < column * row; i++){
         const cell = document.createElement("div");
         cell.classList.add("cell");
+        cell.addEventListener("mouseover", () => {
+            cell.style.backgroundColor = "grey";
+        });
         container.appendChild(cell);
     }
 }
