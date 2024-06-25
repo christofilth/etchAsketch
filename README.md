@@ -8,3 +8,6 @@ The full assignment can be found [here](https://www.theodinproject.com/lessons/f
 
 ### Create a webpage with a 16x16 grid of square divs. 
 Hand wrote code for createGrid function first. After setting up the files and creating links from the .html to .js and .css, added a container div to the html, this is where the grid will be created with JavaScript. In the .js file, wrote the function for createGrid, which uses a loop to create cells to fill the grid. Changed container display to flex box, and cell size is calculated using whatever number is entered into column. 
+
+### Set up a “hover” effect so that the grid divs change color when your mouse passes over them
+Added an event listener so that when the cursor moves over the cell, it changes from white to grey.
