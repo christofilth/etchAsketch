@@ -6,6 +6,9 @@ container.appendChild(settingsContainer);
 
 const sizeInput = document.createElement("input");
 sizeInput.setAttribute("id", "sizeInput");
+sizeInput.addEventListener("click", () => {
+    document.getElementById("sizeInput").value = "";
+    });
 settingsContainer.appendChild(sizeInput);
 document.getElementById("sizeInput").value = "Enter a grid size up to 100";
 
