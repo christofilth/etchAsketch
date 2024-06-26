@@ -17,12 +17,16 @@ container.appendChild(settingsContainer);
 
 // Size bar/button
 
+const sizeContainer = document.createElement("div");
+sizeContainer.classList.add("sizeContainer");
+settingsContainer.appendChild(sizeContainer);
+
 const sizeInput = document.createElement("input");
 sizeInput.setAttribute("id", "sizeInput");
 sizeInput.addEventListener("click", () => {
     document.getElementById("sizeInput").value = "";
     });
-settingsContainer.appendChild(sizeInput);
+sizeContainer.appendChild(sizeInput);
 document.getElementById("sizeInput").value = "Enter a grid size up to 100";
 
 let userSize = 16;
@@ -40,44 +44,52 @@ sizeButton.addEventListener("click", () => {
     }
     console.log(userSize);
 });
-settingsContainer.appendChild(sizeButton);
+sizeContainer.appendChild(sizeButton);
 
+// Colour options
+
+const coloursContainer = document.createElement("div");
+coloursContainer.classList.add("coloursContainer");
+settingsContainer.appendChild(coloursContainer);
 
 let colourPressed = "";
 let opacityPressed ="";
 
+const colourTag = document.createElement("div");
+colourTag.classList.add("colourTag");
+colourTag.textContent = "Colour Mode";
+coloursContainer.appendChild(colourTag);
+
+
 const defaultButton = document.createElement("button");
 defaultButton.classList.add("defaultButton");
-defaultButton.textContent = "DEFAULT COLOUR";
 defaultButton.addEventListener("click", () => {
     colourPressed = false;
     opacityPressed = false;
     gridContainer.innerHTML="";
     createGrid(userSize);
 });
-settingsContainer.appendChild(defaultButton);
+coloursContainer.appendChild(defaultButton);
 
 const colourButton = document.createElement("button");
 colourButton.classList.add("colourButton");
-colourButton.textContent = "RANDOM COLOURS";
 colourButton.addEventListener("click", () => {
     colourPressed = true;
     opacityPressed = false;
     gridContainer.innerHTML="";
     createGrid(userSize);
 });
-settingsContainer.appendChild(colourButton);
+coloursContainer.appendChild(colourButton);
 
 const opacityButton = document.createElement("button");
 opacityButton.classList.add("opacityButton");
-opacityButton.textContent = "OPACITY";
 opacityButton.addEventListener("click", () => {
     colourPressed = false;
     opacityPressed = true;
     gridContainer.innerHTML="";
     createGrid(userSize);
 });
-settingsContainer.appendChild(opacityButton);
+coloursContainer.appendChild(opacityButton);
 
 let ranRed = Math.floor(Math.random() * 255);
 let ranGreen = Math.floor(Math.random() * 255);
