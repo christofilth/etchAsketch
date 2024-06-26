@@ -44,14 +44,14 @@ settingsContainer.appendChild(sizeButton);
 
 
 let colourPressed = "";
-let gradientPressed ="";
+let opacityPressed ="";
 
 const defaultButton = document.createElement("button");
 defaultButton.classList.add("defaultButton");
 defaultButton.textContent = "DEFAULT COLOUR";
 defaultButton.addEventListener("click", () => {
     colourPressed = false;
-    gradientPressed = false;
+    opacityPressed = false;
     gridContainer.innerHTML="";
     createGrid(userSize);
 });
@@ -62,11 +62,22 @@ colourButton.classList.add("colourButton");
 colourButton.textContent = "RANDOM COLOURS";
 colourButton.addEventListener("click", () => {
     colourPressed = true;
-    gradientPressed = false;
+    opacityPressed = false;
     gridContainer.innerHTML="";
     createGrid(userSize);
 });
 settingsContainer.appendChild(colourButton);
+
+const opacityButton = document.createElement("button");
+opacityButton.classList.add("opacityButton");
+opacityButton.textContent = "OPACITY";
+opacityButton.addEventListener("click", () => {
+    colourPressed = false;
+    opacityPressed = true;
+    gridContainer.innerHTML="";
+    createGrid(userSize);
+});
+settingsContainer.appendChild(opacityButton);
 
 let ranRed = Math.floor(Math.random() * 255);
 let ranGreen = Math.floor(Math.random() * 255);
