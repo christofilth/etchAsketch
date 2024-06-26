@@ -25,7 +25,7 @@ document.getElementById("sizeInput").value = "Enter a grid size up to 100";
 
 const sizeButton = document.createElement("button");
 sizeButton.classList.add("sizeButton");
-sizeButton.textContent = "Go!";
+sizeButton.textContent = "GO";
 sizeButton.addEventListener("click", () => {
     let userSize = document.getElementById("sizeInput").value;
     if (userSize > 0 && userSize <= 100) {
