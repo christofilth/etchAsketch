@@ -1,5 +1,9 @@
 const container = document.getElementById("container");
 
+const pageTitle = document.createElement("h1");
+pageTitle.textContent = "etch-A-sketch";
+container.appendChild(pageTitle);
+
 // Settings bar 
 
 const settingsContainer = document.createElement("div");
