@@ -1,8 +1,23 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 #container {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    flex-wrap: wrap;
+    align-items: flex-start;
+}
+
+.settingsContainer {
+    display: flex;
+    margin-bottom: 8px;
+}
+
+#sizeInput {
+    margin-right: 8px;
 }
 
 .gridContainer {
