@@ -14,3 +14,6 @@ Added an event listener so that when the cursor moves over the cell, it changes 
 
 ### Add user input to change grid size
 Created an input box and button to change the grid size. When the user presses the button, the grid is cleared and a new one is created based on the number entered. An alert pops up if the user enters a number that isn't between 1 and 100. 
+
+### Extra credit tasks
+Added an option for random colour squares and for opacity +10% squares.
