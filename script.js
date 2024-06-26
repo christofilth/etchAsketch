@@ -103,6 +103,21 @@ function createGrid(gridSize){
             gridContainer.appendChild(cell);
             console.log(ranRed, ranGreen, ranBlue)
         }
+    } else if (opacityPressed == true) {
+        for (i = 0; i < gridSize * gridSize; i++){
+            const cell = document.createElement("div");
+            cell.classList.add("cell");
+            let opacity = 0;
+            cell.addEventListener("mouseover", () => {
+                opacity += 0.1;
+                if (opacity > 1) {
+                    opacity = 1;
+                }
+                cell.style.backgroundColor = `rgb(0, 0, 0, ${opacity})`
+            });
+            gridContainer.appendChild(cell);
+        }
+
     } else {
         for (i = 0; i < gridSize * gridSize; i++){
             const cell = document.createElement("div");
