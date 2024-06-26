@@ -44,12 +44,14 @@ settingsContainer.appendChild(sizeButton);
 
 
 let colourPressed = "";
+let gradientPressed ="";
 
 const defaultButton = document.createElement("button");
 defaultButton.classList.add("defaultButton");
 defaultButton.textContent = "DEFAULT COLOUR";
 defaultButton.addEventListener("click", () => {
     colourPressed = false;
+    gradientPressed = false;
     gridContainer.innerHTML="";
     createGrid(userSize);
 });
@@ -60,6 +62,7 @@ colourButton.classList.add("colourButton");
 colourButton.textContent = "RANDOM COLOURS";
 colourButton.addEventListener("click", () => {
     colourPressed = true;
+    gradientPressed = false;
     gridContainer.innerHTML="";
     createGrid(userSize);
 });
@@ -99,9 +102,6 @@ function createGrid(gridSize){
             gridContainer.appendChild(cell);
         }
     }
-
-
 }
-
 
 createGrid(userSize);
