@@ -43,7 +43,17 @@ sizeButton.addEventListener("click", () => {
 settingsContainer.appendChild(sizeButton);
 
 
-let colourPressed = false;
+let colourPressed = "";
+
+const defaultButton = document.createElement("button");
+defaultButton.classList.add("defaultButton");
+defaultButton.textContent = "DEFAULT COLOUR";
+defaultButton.addEventListener("click", () => {
+    colourPressed = false;
+    gridContainer.innerHTML="";
+    createGrid(userSize);
+});
+settingsContainer.appendChild(defaultButton);
 
 const colourButton = document.createElement("button");
 colourButton.classList.add("colourButton");
@@ -52,7 +62,6 @@ colourButton.addEventListener("click", () => {
     colourPressed = true;
     gridContainer.innerHTML="";
     createGrid(userSize);
-    console.log(colourPressed);
 });
 settingsContainer.appendChild(colourButton);
 
